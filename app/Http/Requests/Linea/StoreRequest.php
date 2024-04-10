@@ -27,7 +27,6 @@ class StoreRequest extends FormRequest
     {
         return [
             "nombre"=>['required','string','max:255','unique:lineas,nombre'],
-            "encargado_id"=>['nullable','integer','unique:lineas,encargado_id']
         ];
     }
     function failedValidation(Validator $validator)

@@ -34,7 +34,6 @@ class RequisitoSeeder extends Seeder
             'Acta de nacimiento de los hijos',
             'Certificado medico',
             'Licencia de manejo',
-            'Fotografia',
             'Carta de recomendacion',
             'Apertura de cuenta bancaria BBVA',
             'Reporte de semanas cotizadas',
@@ -45,6 +44,10 @@ class RequisitoSeeder extends Seeder
         ];
 
         foreach ($requisitos as $requisito) {
-            Requisito::create(['nombre' => $requisito]);
-        }    }
+            Requisito::create([
+                'nombre' => $requisito,
+                'descripcion' => 'Descripcion de ' . $requisito
+            ]);
+        }
+    }
 }
